@@ -153,8 +153,20 @@ var RADIUS = 8;
 var MARGIN_TOP = 60;
 var MARGIN_LEFT = 30;
 
+var settingtime=k()
+
+function k(){
+    var x=prompt("请设置时间(分钟)"," ");
+    if(x>5999||x<0)
+    {
+        alert("请输入正确的分钟数(0-5998)并刷新");
+    }
+    else{
+    return  x;}
+}
+
 const endTime = new Date();
-endTime.setTime(endTime.getTime()+1500*1000)
+endTime.setTime(endTime.getTime()+settingtime*60*1000)
 var curShowTimeSeconds = 0
 
 var balls = [];
